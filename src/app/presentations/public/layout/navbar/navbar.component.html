@@ -1,0 +1,150 @@
+<!-- Top Contact Bar -->
+
+<!-- Modern Sticky Navbar | Tailwind CSS | Green Theme -->
+<nav
+	class="sticky top-0 w-full bg-white shadow z-50 transition-all duration-300"
+>
+	<div
+		class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-2"
+	>
+		<!-- Logo -->
+		<a href="/" class="flex items-center gap-3">
+			<img
+				src="logo/logo.jpg"
+				alt="Logo"
+				class="h-12 w-12 rounded-full shadow border-4 border-green-500"
+			/>
+			<p>Sinchulla Villa</p>
+		</a>
+
+		<!-- Desktop Nav Links -->
+		<ul class="hidden md:flex items-center gap-8 text-[1.08rem] font-medium">
+			<li>
+				<a
+					href="#loyalty"
+					class="hover:underline hover:text-green-500 transition"
+					>Rooms</a
+				>
+			</li>
+			<li>
+				<a href="#event" class="hover:underline hover:text-green-500 transition"
+					>About Us</a
+				>
+			</li>
+			<li>
+				<a
+					href="#experience"
+					class="hover:underline hover:text-green-500 transition"
+					>Gallery</a
+				>
+			</li>
+			<li>
+				<a
+					href="#exbperience"
+					class="hover:underline hover:text-green-500 transition"
+					>Booking</a
+				>
+			</li>
+		</ul>
+		<!-- Desktop Contact & Auth -->
+		<div class="hidden md:flex items-center gap-6">
+			<span class="flex items-center gap-2">
+				<span class="text-green-500 text-xl"><i class="pi pi-bell"></i></span>
+				<span class="font-semibold">+975-98765432</span>
+			</span>
+			<span class="flex items-center gap-2">
+				<span class="text-green-500 text-xl"><i class="pi pi-phone"></i></span>
+				<span class="font-semibold">+975-11223344</span>
+			</span>
+			<a href="#login" class="font-semibold hover:underline transition"
+				>Login</a
+			>
+			<a href="#register" class="font-semibold hover:underline transition"
+				>Register</a
+			>
+			<a href="#webmail" class="font-semibold hover:underline transition"
+				>Webmail</a
+			>
+		</div>
+		<!-- Hamburger for Mobile -->
+		<button
+			class="md:hidden flex flex-col justify-center items-center w-10 h-10"
+			(click)="toggleMenu()"
+			aria-label="Open menu"
+		>
+			<span class="block w-7 h-0.5 bg-green-500 mb-1"></span>
+			<span class="block w-7 h-0.5 bg-green-500 mb-1"></span>
+			<span class="block w-7 h-0.5 bg-green-500"></span>
+		</button>
+	</div>
+	<!-- Mobile Menu -->
+	<div
+		class="md:hidden fixed inset-0 bg-white z-50 flex flex-col items-start pt-6 px-6 transition-transform duration-300"
+		[class.translate-x-0]="menuOpen"
+		[class.translate-x-full]="!menuOpen"
+		style="right: 0; top: 0; width: 100vw; height: 100vh"
+	>
+		<div class="flex items-center justify-between w-full mb-8">
+			<a href="/" class="flex items-center gap-3">
+				<img
+					src="logo/logo.jpg"
+					alt="Logo"
+					class="h-10 w-10 rounded-full shadow border-4 border-green-500"
+				/>
+			</a>
+			<button
+				class="text-3xl text-green-700"
+				(click)="toggleMenu()"
+				aria-label="Close menu"
+			>
+				&times;
+			</button>
+		</div>
+		<ul class="flex flex-col gap-6 text-lg font-semibold text-green-700 w-full">
+			<li>
+				<a
+					href="#loyalty"
+					class="hover:underline hover:text-green-500 transition"
+					>The TNR Loyalty</a
+				>
+			</li>
+			<li>
+				<a href="#event" class="hover:underline hover:text-green-500 transition"
+					>Plan an Event</a
+				>
+			</li>
+			<li>
+				<a
+					href="#experience"
+					class="hover:underline hover:text-green-500 transition"
+					>Experience Paro</a
+				>
+			</li>
+		</ul>
+		<div class="flex flex-col gap-4 mt-8 w-full">
+			<span class="flex items-center gap-2 text-green-700">
+				<span class="text-green-500 text-xl">🔔</span>
+				<span class="font-semibold">+975-98765432</span>
+			</span>
+			<span class="flex items-center gap-2 text-green-700">
+				<span class="text-green-500 text-xl">📞</span>
+				<span class="font-semibold">+975-11223344</span>
+			</span>
+			<a
+				href="#login"
+				class="text-green-500 font-semibold hover:underline transition"
+				>Login</a
+			>
+			<a
+				href="#register"
+				class="text-green-500 font-semibold hover:underline transition"
+				>Register</a
+			>
+			<a
+				href="#webmail"
+				class="text-green-500 font-semibold hover:underline transition"
+				>Webmail</a
+			>
+		</div>
+	</div>
+</nav>

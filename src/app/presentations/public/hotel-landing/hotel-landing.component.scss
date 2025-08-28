@@ -1,0 +1,94 @@
+/* Basic styles for hotel landing page */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #222;
+}
+.hero-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+.contact-info img {
+    width: 24px;
+    margin-right: 8px;
+}
+.main-nav {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main-nav li {
+    margin: 0 1.5rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+.about,
+.rooms,
+.gallery,
+.events,
+.testimonials {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+.room-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.room {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 220px;
+}
+.discount {
+    color: #e53935;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.gallery-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery-images img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    margin-top: 2rem;
+}
+.footer-content p {
+    margin: 0.5rem 0;
+}
