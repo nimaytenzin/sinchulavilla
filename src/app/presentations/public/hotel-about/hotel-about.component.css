@@ -1,0 +1,78 @@
+/* Hotel About Component Styles */
+:host {
+  display: block;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Timeline Animation */
+.space-y-12 > div {
+  animation: fadeInSlide 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.space-y-12 > div:nth-child(1) { animation-delay: 0.1s; }
+.space-y-12 > div:nth-child(2) { animation-delay: 0.2s; }
+.space-y-12 > div:nth-child(3) { animation-delay: 0.3s; }
+.space-y-12 > div:nth-child(4) { animation-delay: 0.4s; }
+.space-y-12 > div:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Team Cards Hover Effect */
+.grid > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Award Cards Animation */
+.bg-amber-50 {
+  transition: all 0.3s ease;
+}
+
+.bg-amber-50:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+/* Image Overlay Effects */
+.relative img {
+  transition: transform 0.5s ease;
+}
+
+.relative:hover img {
+  transform: scale(1.05);
+}
+
+/* Button Hover Effects */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+}

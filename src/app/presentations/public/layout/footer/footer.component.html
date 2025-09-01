@@ -1,120 +1,225 @@
-<!-- Responsive Luxury Hotel Footer | Tailwind CSS -->
-<footer class="bg-gray-900 text-gray-100 pt-10 pb-4">
-	<div class="max-w-screen-xl mx-auto px-4">
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+<!-- Luxury Hotel Footer | Tailwind CSS | Amber Theme -->
+<footer class="bg-gray-900 text-gray-100 pt-16 pb-6">
+	<div class="max-w-screen-xl mx-auto px-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 			<!-- Logo & Address -->
 			<div class="flex flex-col items-center md:items-start">
 				<img
 					src="logo/logo.jpg"
-					alt="Logo"
-					class="w-20 h-20 rounded-full mb-4 shadow-lg"
+					alt="Sinchula Villa Logo"
+					class="w-24 h-24 rounded-full mb-6 shadow-lg border-2 border-amber-500"
 				/>
-				<div class="text-center md:text-left text-gray-300 text-sm">
-					<span class="block">Above to Paro Hospital</span>
-					<span class="block">Paro : Bhutan</span>
+				<div class="text-center md:text-left">
+					<h3 class="font-serif text-xl font-bold text-white mb-2">
+						Sinchula Villa
+					</h3>
+					<div class="text-gray-300 font-serif leading-relaxed">
+						<p class="mb-1">Samarlungkha, Geptey (Olathang)</p>
+						<p class="mb-1">Paro, Bhutan</p>
+						<p class="text-amber-400 text-sm tracking-wider">★★★★★</p>
+					</div>
 				</div>
 			</div>
-			<!-- Contact Us -->
+
+			<!-- Contact Information -->
 			<div>
-				<h3 class="text-lg font-bold mb-3 text-white">Contact Us</h3>
-				<div class="space-y-1 text-sm">
-					<div>Phone: <span class="font-semibold">+975-12345678</span></div>
-					<div>
-						Reservation: <span class="font-semibold">+975-98765432</span>
+				<h3 class="font-serif text-xl font-bold mb-6 text-white">Contact Us</h3>
+				<div class="space-y-3 font-serif">
+					<div class="flex items-center gap-3">
+						<span class="text-amber-500 text-lg"
+							><i class="pi pi-phone"></i
+						></span>
+						<div>
+							<p class="text-sm text-gray-400">Reservation</p>
+							<p class="font-semibold text-white">+975-98765432</p>
+						</div>
 					</div>
-					<div>
-						Front Desk: <span class="font-semibold">+975-11223344</span>
+					<div class="flex items-center gap-3">
+						<span class="text-amber-500 text-lg"
+							><i class="pi pi-phone"></i
+						></span>
+						<div>
+							<p class="text-sm text-gray-400">Front Desk</p>
+							<p class="font-semibold text-white">+975-11223344</p>
+						</div>
 					</div>
-					<div>
-						Email:
+					<div class="flex items-center gap-3">
+						<span class="text-amber-500 text-lg"
+							><i class="pi pi-envelope"></i
+						></span>
+						<div>
+							<p class="text-sm text-gray-400">Email</p>
+							<a
+								href="mailto:info@sinchulavilla.bt"
+								class="text-amber-400 hover:text-amber-300 transition-colors"
+							>
+								info&#64;sinchulavilla.bt
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Hotel Services -->
+			<div>
+				<h3 class="font-serif text-xl font-bold mb-6 text-white">
+					Hotel Services
+				</h3>
+				<ul class="space-y-2 font-serif">
+					<li>
 						<a
-							href="mailto:info@tashinamgayresort.com"
-							class="text-green-400 font-medium hover:underline"
-							>infotashinamgayresort.com</a
-						>
-					</div>
-				</div>
-			</div>
-			<!-- Learn More -->
-			<div>
-				<h3 class="text-lg font-bold mb-3 text-white">Learn More</h3>
-				<ul class="space-y-1">
-					<li>
-						<a href="#about" class="text-green-400 hover:underline">About Us</a>
-					</li>
-					<li>
-						<a href="#dining" class="text-green-400 hover:underline"
-							>Dining &amp; Bar</a
+							href="#rooms"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Luxury Rooms & Suites</a
 						>
 					</li>
-					<li><a href="#spa" class="text-green-400 hover:underline">Spa</a></li>
 					<li>
-						<a href="#contact" class="text-green-400 hover:underline"
-							>Contact Us</a
+						<a
+							href="#dining"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Fine Dining Restaurant</a
+						>
+					</li>
+					<li>
+						<a
+							href="#spa"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Spa & Wellness</a
+						>
+					</li>
+					<li>
+						<a
+							href="#events"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Event Planning</a
+						>
+					</li>
+					<li>
+						<a
+							href="#tours"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Cultural Tours</a
+						>
+					</li>
+					<li>
+						<a
+							href="#transport"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Airport Transfer</a
 						>
 					</li>
 				</ul>
 			</div>
-			<!-- Our Partners -->
+
+			<!-- Explore Paro -->
 			<div>
-				<h3 class="text-lg font-bold mb-3 text-white">Our Partners</h3>
-				<ul class="space-y-1">
+				<h3 class="font-serif text-xl font-bold mb-6 text-white">
+					Explore Paro
+				</h3>
+				<ul class="space-y-2 font-serif">
 					<li>
-						<a href="#tragopan" class="text-green-400 hover:underline"
-							>Tragopan Tours &amp; Travels</a
+						<a
+							href="#dzong"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Paro Dzong</a
 						>
 					</li>
 					<li>
-						<a href="#8heaven" class="text-green-400 hover:underline"
-							>8 Heaven Stores</a
+						<a
+							href="#museum"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>National Museum</a
 						>
 					</li>
 					<li>
-						<a href="#sportwear" class="text-green-400 hover:underline"
-							>Bhutan Sportwear</a
+						<a
+							href="#tigers-nest"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Tiger's Nest Monastery</a
 						>
 					</li>
 					<li>
-						<a href="#namgay" class="text-green-400 hover:underline"
-							>Namgay Heritage</a
+						<a
+							href="#market"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Weekend Market</a
 						>
 					</li>
 					<li>
-						<a href="#bigsale" class="text-green-400 hover:underline"
-							>Big Sale</a
+						<a
+							href="#temples"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Ancient Temples</a
+						>
+					</li>
+					<li>
+						<a
+							href="#hiking"
+							class="text-gray-300 hover:text-amber-400 transition-colors"
+							>Hiking Trails</a
 						>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<!-- Copyright & Social Bar -->
-		<div
-			class="flex flex-col md:flex-row items-center justify-between border-t border-gray-700 mt-10 pt-4"
-		>
-			<div class="text-sm text-gray-400">
-				© 2025 Sinchula Villa. All Rights Reserved.
+
+		<!-- Newsletter Subscription -->
+		<div class="border-t border-gray-700 mt-12 pt-8 text-center">
+			<h3 class="font-serif text-xl font-bold text-white mb-4">
+				Stay Connected
+			</h3>
+			<p class="text-gray-300 font-serif mb-6">
+				Subscribe to receive exclusive offers and updates from Sinchula Villa
+			</p>
+			<div
+				class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+			>
+				<input
+					type="email"
+					placeholder="Enter your email"
+					class="flex-1 px-4 py-2 bg-gray-800 border border-gray-600 rounded text-white font-serif focus:outline-none focus:border-amber-500"
+				/>
+				<button
+					class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 font-serif tracking-wide transition-all duration-300 rounded"
+				>
+					Subscribe
+				</button>
 			</div>
-			<div class="flex gap-3 mt-4 md:mt-0">
+		</div>
+
+		<!-- Copyright & Social Media -->
+		<div
+			class="flex flex-col lg:flex-row items-center justify-between border-t border-gray-700 mt-12 pt-6"
+		>
+			<div class="font-serif text-sm text-gray-400 mb-4 lg:mb-0">
+				© 2025 Sinchula Villa, Paro. All Rights Reserved. | Privacy Policy |
+				Terms of Service
+			</div>
+			<div class="flex gap-4">
 				<a
 					href="#"
-					class="bg-green-500 hover:bg-green-600 text-white rounded w-8 h-8 flex items-center justify-center"
-					><i class="pi pi-facebook"></i
-				></a>
+					class="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-300"
+				>
+					<i class="pi pi-facebook"></i>
+				</a>
 				<a
 					href="#"
-					class="bg-green-500 hover:bg-green-600 text-white rounded w-8 h-8 flex items-center justify-center"
-					><i class="pi pi-instagram"></i
-				></a>
+					class="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-300"
+				>
+					<i class="pi pi-instagram"></i>
+				</a>
 				<a
 					href="#"
-					class="bg-green-500 hover:bg-green-600 text-white rounded w-8 h-8 flex items-center justify-center"
-					><i class="pi pi-twitter"></i
-				></a>
+					class="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-300"
+				>
+					<i class="pi pi-twitter"></i>
+				</a>
 				<a
 					href="#"
-					class="bg-green-500 hover:bg-green-600 text-white rounded w-8 h-8 flex items-center justify-center"
-					><i class="pi pi-google"></i
-				></a>
+					class="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-300"
+				>
+					<i class="pi pi-youtube"></i>
+				</a>
 			</div>
 		</div>
 	</div>

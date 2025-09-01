@@ -1,0 +1,101 @@
+/* Hotel Contact Page Component Styles */
+:host {
+  display: block;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Contact Cards Animation */
+.grid > div {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.grid > div:nth-child(1) { animation-delay: 0.1s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Cards Hover Effects */
+.bg-amber-50 {
+  transition: all 0.3s ease;
+}
+
+.bg-amber-50:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.2);
+}
+
+/* Form Input Focus Animations */
+input:focus, select:focus, textarea:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Contact Info Icons */
+.w-16.h-16 {
+  transition: all 0.3s ease;
+}
+
+.bg-amber-50:hover .w-16.h-16 {
+  transform: scale(1.1);
+  background-color: #d97706;
+}
+
+/* Button Hover Effects */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Overlay Effects */
+.relative img {
+  transition: transform 0.5s ease;
+}
+
+.relative:hover img {
+  transform: scale(1.05);
+}
+
+/* Services List Animation */
+.flex.items-center {
+  transition: all 0.3s ease;
+}
+
+.flex.items-center:hover {
+  transform: translateX(5px);
+  color: #d97706;
+}
+
+/* Hours Table Hover */
+.flex.justify-between:hover {
+  background-color: #fef3c7;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .p-8 {
+    padding: 1.5rem;
+  }
+}

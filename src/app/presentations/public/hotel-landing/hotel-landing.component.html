@@ -1,6 +1,6 @@
-<!-- 70vh Auto-Scrolling Image Slider -->
+<!-- Luxury Hotel Landing Hero -->
 <div
-	class="relative w-full h-[70vh] overflow-hidden mb-8 flex items-center justify-center bg-black/70"
+	class="relative w-full h-screen overflow-hidden flex items-center justify-center bg-black"
 >
 	<div class="absolute inset-0 w-full h-full">
 		<img
@@ -8,54 +8,221 @@
 			[src]="img"
 			[class.active]="i === currentSlide"
 			alt="Sinchula Villa Slide"
-			class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 scale-105"
+			class="absolute inset-0 w-full h-full object-cover transition-all duration-2000 opacity-0 scale-110 filter brightness-50"
 			[class.opacity-100]="i === currentSlide"
 			[class.scale-100]="i === currentSlide"
+			[class.brightness-75]="i === currentSlide"
 			[class.z-20]="i === currentSlide"
 		/>
-		<!-- Improved gradient for text contrast -->
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent pointer-events-none"
+			class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 pointer-events-none"
 		></div>
 	</div>
-	<div class="relative z-40 text-center text-white px-6">
-		<h1
-			class="text-4xl md:text-6xl font-bold tracking-tight drop-shadow-2xl mb-4"
+	<div class="relative z-40 text-center text-white px-6 max-w-5xl mx-auto">
+		<div class="mb-6">
+			<div
+				class="text-amber-300 text-lg font-serif tracking-widest uppercase mb-2"
+			>
+				Welcome to
+			</div>
+			<h1
+				class="font-serif text-5xl md:text-8xl font-normal tracking-wide drop-shadow-2xl mb-4 text-white leading-tight"
+			>
+				Sinchula Villa
+			</h1>
+			<div
+				class="text-amber-200 text-xl md:text-2xl font-serif tracking-wider mb-8"
+			>
+				Paro, Bhutan
+			</div>
+		</div>
+		<div class="w-24 h-px bg-amber-300 mx-auto mb-8"></div>
+		<p
+			class="max-w-3xl mx-auto text-lg md:text-xl font-serif leading-relaxed drop-shadow-xl text-gray-100 font-light"
 		>
-			Sinchula Villa Paro
-		</h1>
-		<p class="max-w-2xl mx-auto text-lg md:text-2xl font-light drop-shadow-xl">
-			A boutique hotel nestled in the pine forests of Paro, Bhutan. Experience
-			luxury, tranquility, and authentic Bhutanese hospitality.
+			Experience the epitome of Bhutanese luxury nestled in the sacred pine
+			forests of Paro. Where timeless elegance meets authentic hospitality in
+			the heart of the Last Shangri-La.
 		</p>
+		<div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+			<button
+				class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 border border-amber-600"
+			>
+				Reserve Your Stay
+			</button>
+			<button
+				class="border border-white text-white hover:bg-white hover:text-black px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300"
+			>
+				Explore Experiences
+			</button>
+		</div>
 	</div>
 </div>
-<section
-	class="about py-12 px-6 md:px-16 max-w-4xl mx-auto mt-[-5rem] relative z-40"
->
-	<h2
-		class="text-green-600 text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-center drop-shadow-lg"
-	>
-		About Sinchula Villa
-	</h2>
-	<p
-		class="text-gray-700 text-lg md:text-2xl font-light leading-relaxed text-center"
-	>
-		Sinchula Villa is nestled approximately 2 km from Paro town in tranquil pine
-		forests, offering sweeping views of Paro Dzong and the nearby museum.<br />
-		It’s perfectly positioned amid fruit orchards and tall pines, providing
-		peace without sacrificing easy access to cultural sites.<br />
-		A charming family-owned boutique hotel nestled in the scenic valley of Paro,
-		Sinchula Villa offers warm Bhutanese hospitality and a cozy, traditional
-		atmosphere.<br />
-		Run by a local family, the hotel blends modern comforts with authentic
-		Bhutanese architecture and décor.<br />
-		Just 4–5 km (around 10 minutes by car) from Paro Airport. Conveniently
-		located near local attractions: Paro Sunday Market, Jangtsa Dumtseg
-		Lhakhang, Chhoeten Lhakhang, Rinpung Dzong, and the Bhutan National
-		Museum—all within a few kilometers.<br />
-		Guests can enjoy a delicious array of menu, stunning mountain views, and
-		easy access to nearby attractions.<br />
-		Perfect for travelers seeking a personal touch and cultural immersion.
-	</p>
+
+<!-- About Section -->
+<section class="bg-stone-50 py-20 px-6">
+	<div class="max-w-6xl mx-auto">
+		<div class="text-center mb-16">
+			<div
+				class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+			>
+				Our Story
+			</div>
+			<h2
+				class="font-serif text-4xl md:text-6xl text-gray-800 mb-8 leading-tight"
+			>
+				About Sinchula Villa
+			</h2>
+			<div class="w-24 h-px bg-amber-600 mx-auto mb-8"></div>
+		</div>
+		<div class="grid md:grid-cols-2 gap-16 items-center">
+			<div>
+				<p
+					class="font-serif text-lg md:text-xl leading-relaxed text-gray-700 mb-6"
+				>
+					Nestled approximately 2 kilometers from Paro town in tranquil pine
+					forests, Sinchula Villa offers sweeping views of the ancient Paro
+					Dzong and the nearby museum.
+				</p>
+				<p
+					class="font-serif text-lg md:text-xl leading-relaxed text-gray-700 mb-6"
+				>
+					Perfectly positioned amid fruit orchards and towering pines, our
+					family-owned boutique hotel provides serenity without sacrificing
+					access to Bhutan's most treasured cultural sites.
+				</p>
+				<p class="font-serif text-lg md:text-xl leading-relaxed text-gray-700">
+					Experience the harmony of modern luxury and authentic Bhutanese
+					architecture, where warm hospitality meets the timeless beauty of the
+					Last Shangri-La.
+				</p>
+			</div>
+			<div class="relative">
+				<img
+					src="images/sinchula_001.jpg"
+					alt="Villa Exterior"
+					class="w-full h-96 object-cover shadow-2xl"
+				/>
+				<div
+					class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-600/10 border border-amber-600"
+				></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Rooms & Suites -->
+<section class="bg-white py-20 px-6" #rooms>
+	<div class="max-w-6xl mx-auto">
+		<div class="text-center mb-16">
+			<div
+				class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+			>
+				Accommodations
+			</div>
+			<h2
+				class="font-serif text-4xl md:text-6xl text-gray-800 mb-8 leading-tight"
+			>
+				Rooms & Suites
+			</h2>
+			<div class="w-24 h-px bg-amber-600 mx-auto mb-8"></div>
+		</div>
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div class="group cursor-pointer">
+				<div class="relative overflow-hidden mb-6">
+					<img
+						src="images/sinchula_005.jpg"
+						alt="Standard Room"
+						class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+					/>
+					<div
+						class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+				<h3 class="font-serif text-2xl text-gray-800 mb-2">Standard Room</h3>
+				<p class="text-gray-600 mb-4">
+					Elegant comfort with traditional Bhutanese touches
+				</p>
+				<div class="flex items-center justify-between">
+					<span class="text-2xl font-serif text-gray-800">Nu. 2,799</span>
+					<span class="text-lg text-gray-500 line-through">Nu. 3,200</span>
+				</div>
+			</div>
+			<div class="group cursor-pointer">
+				<div class="relative overflow-hidden mb-6">
+					<img
+						src="images/sinchula_006.jpg"
+						alt="Cottage Villa"
+						class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+					/>
+					<div
+						class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+				<h3 class="font-serif text-2xl text-gray-800 mb-2">
+					Cottage Villa Room
+				</h3>
+				<p class="text-gray-600 mb-4">
+					Private villa experience amidst pine forests
+				</p>
+				<div class="flex items-center justify-between">
+					<span class="text-2xl font-serif text-gray-800">Nu. 4,500</span>
+					<span class="text-lg text-gray-500 line-through">Nu. 5,000</span>
+				</div>
+			</div>
+			<div class="group cursor-pointer md:col-span-2 lg:col-span-1">
+				<div class="relative overflow-hidden mb-6">
+					<img
+						src="images/sinchula_007.jpg"
+						alt="Suite Room"
+						class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+					/>
+					<div
+						class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+				<h3 class="font-serif text-2xl text-gray-800 mb-2">Suite Room</h3>
+				<p class="text-gray-600 mb-4">
+					Spacious luxury with panoramic mountain views
+				</p>
+				<div class="flex items-center justify-between mb-2">
+					<span class="text-2xl font-serif text-gray-800">Nu. 5,000</span>
+					<span class="text-lg text-gray-500 line-through">Nu. 6,000</span>
+				</div>
+				<p class="text-sm text-gray-500">
+					800 sq. feet • Mountain view • Premium amenities
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Testimonials -->
+<section class="bg-gradient-to-b from-amber-50 to-white py-20 px-6">
+	<div class="max-w-4xl mx-auto text-center">
+		<div
+			class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+		>
+			Guest Experiences
+		</div>
+		<h2
+			class="font-serif text-4xl md:text-5xl text-gray-800 mb-12 leading-tight"
+		>
+			What Our Guests Say
+		</h2>
+		<div class="bg-white p-12 shadow-lg relative">
+			<div class="text-6xl text-amber-300 absolute top-4 left-8">"</div>
+			<p
+				class="font-serif text-xl md:text-2xl text-gray-700 leading-relaxed italic mb-8 px-8"
+			>
+				A wonderful stay with warm Bhutanese hospitality! The villa perfectly
+				captures the essence of Bhutan while providing modern luxury. The views
+				of Paro Dzong from our room were absolutely breathtaking.
+			</p>
+			<div class="w-16 h-px bg-amber-600 mx-auto mb-6"></div>
+			<p class="font-serif text-lg text-gray-600">
+				— Sarah & James Mitchell, London
+			</p>
+		</div>
+	</div>
 </section>

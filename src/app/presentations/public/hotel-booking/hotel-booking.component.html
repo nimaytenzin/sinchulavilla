@@ -1,0 +1,382 @@
+<!-- Luxury Hotel Booking Page -->
+<div class="min-h-screen bg-stone-50">
+	<!-- Hero Section -->
+	<div
+		class="relative h-96 bg-cover bg-center bg-black"
+		style="
+			background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+				url('images/sinchula_005.jpg');
+		"
+	>
+		<div class="absolute inset-0 flex items-center justify-center">
+			<div class="text-center text-white px-6">
+				<div
+					class="text-amber-300 text-lg font-serif tracking-widest uppercase mb-2"
+				>
+					Reserve Your Stay
+				</div>
+				<h1
+					class="font-serif text-4xl md:text-6xl font-normal tracking-wide drop-shadow-2xl mb-4"
+				>
+					Book Your Experience
+				</h1>
+				<div class="text-amber-200 text-xl font-serif tracking-wider">
+					at Sinchula Villa, Paro
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Booking Form Section -->
+	<div class="max-w-4xl mx-auto px-6 py-16">
+		<div class="bg-white shadow-2xl rounded-lg overflow-hidden">
+			<!-- Form Header -->
+			<div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-8">
+				<h2 class="font-serif text-3xl mb-2">Reservation Details</h2>
+				<p class="text-amber-100 font-serif">
+					Complete your booking information below
+				</p>
+			</div>
+
+			<!-- Form Content -->
+			<form class="p-8 space-y-8">
+				<!-- Guest Information -->
+				<div class="space-y-6">
+					<h3
+						class="font-serif text-2xl text-gray-800 border-b border-amber-200 pb-2"
+					>
+						Guest Information
+					</h3>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>First Name *</label
+							>
+							<input
+								type="text"
+								[(ngModel)]="bookingData.firstName"
+								name="firstName"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="Enter your first name"
+								required
+							/>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Last Name *</label
+							>
+							<input
+								type="text"
+								[(ngModel)]="bookingData.lastName"
+								name="lastName"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="Enter your last name"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Email Address *</label
+							>
+							<input
+								type="email"
+								[(ngModel)]="bookingData.email"
+								name="email"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="your.email&#64;domain.com"
+								required
+							/>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Phone Number *</label
+							>
+							<input
+								type="tel"
+								[(ngModel)]="bookingData.phone"
+								name="phone"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="+975-12345678"
+								required
+							/>
+						</div>
+					</div>
+
+					<!-- Nationality Selection -->
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Nationality *</label
+							>
+							<select
+								[(ngModel)]="bookingData.nationality"
+								name="nationality"
+								(change)="onNationalityChange()"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								required
+							>
+								<option value="">Select your nationality</option>
+								<option value="bhutanese">Bhutanese</option>
+								<option value="indian">Indian</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div *ngIf="bookingData.nationality === 'bhutanese'">
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Citizen ID Number *</label
+							>
+							<input
+								type="text"
+								[(ngModel)]="bookingData.citizenId"
+								name="citizenId"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="Enter your CID number"
+							/>
+						</div>
+						<div *ngIf="bookingData.nationality === 'other'">
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Country *</label
+							>
+							<input
+								type="text"
+								[(ngModel)]="bookingData.country"
+								name="country"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="Enter your country"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<!-- Booking Details -->
+				<div class="space-y-6">
+					<h3
+						class="font-serif text-2xl text-gray-800 border-b border-amber-200 pb-2"
+					>
+						Booking Details
+					</h3>
+
+					<div class="grid md:grid-cols-3 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Check-in Date *</label
+							>
+							<input
+								type="date"
+								[(ngModel)]="bookingData.checkInDate"
+								name="checkInDate"
+								[min]="minDate"
+								(change)="calculateStayDuration()"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								required
+							/>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Check-out Date *</label
+							>
+							<input
+								type="date"
+								[(ngModel)]="bookingData.checkOutDate"
+								name="checkOutDate"
+								[min]="bookingData.checkInDate"
+								(change)="calculateStayDuration()"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								required
+							/>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Number of Nights</label
+							>
+							<input
+								type="number"
+								[(ngModel)]="bookingData.nights"
+								name="nights"
+								readonly
+								class="w-full px-4 py-3 border border-gray-200 rounded-lg font-serif bg-gray-50 text-gray-600"
+							/>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Room Type *</label
+							>
+							<select
+								[(ngModel)]="bookingData.roomType"
+								name="roomType"
+								(change)="calculateTotal()"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								required
+							>
+								<option value="">Select room type</option>
+								<option value="standard">
+									Standard Room - Nu. 2,799/night
+								</option>
+								<option value="cottage">
+									Cottage Villa Room - Nu. 4,500/night
+								</option>
+								<option value="suite">Suite Room - Nu. 5,000/night</option>
+							</select>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Number of Guests *</label
+							>
+							<select
+								[(ngModel)]="bookingData.numberOfGuests"
+								name="numberOfGuests"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								required
+							>
+								<option value="">Select number of guests</option>
+								<option value="1">1 Guest</option>
+								<option value="2">2 Guests</option>
+								<option value="3">3 Guests</option>
+								<option value="4">4 Guests</option>
+								<option value="5">5+ Guests</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Special Requests -->
+				<div class="space-y-6">
+					<h3
+						class="font-serif text-2xl text-gray-800 border-b border-amber-200 pb-2"
+					>
+						Special Requests & Remarks
+					</h3>
+
+					<div>
+						<label class="block text-gray-700 font-serif text-lg mb-2"
+							>Special Requests or Remarks</label
+						>
+						<textarea
+							[(ngModel)]="bookingData.remarks"
+							name="remarks"
+							rows="4"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200 resize-none"
+							placeholder="Please let us know of any special requirements, dietary preferences, celebration occasions, or other requests to make your stay more comfortable..."
+						></textarea>
+					</div>
+
+					<!-- Additional Services -->
+					<div>
+						<label class="block text-gray-700 font-serif text-lg mb-4"
+							>Additional Services</label
+						>
+						<div class="grid md:grid-cols-2 gap-4">
+							<label class="flex items-center space-x-3 cursor-pointer">
+								<input
+									type="checkbox"
+									[(ngModel)]="bookingData.services.airportTransfer"
+									name="airportTransfer"
+									class="w-5 h-5 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+								/>
+								<span class="font-serif text-gray-700"
+									>Airport Transfer (+Nu. 800)</span
+								>
+							</label>
+							<label class="flex items-center space-x-3 cursor-pointer">
+								<input
+									type="checkbox"
+									[(ngModel)]="bookingData.services.spaService"
+									name="spaService"
+									class="w-5 h-5 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+								/>
+								<span class="font-serif text-gray-700"
+									>Spa & Wellness (+Nu. 1,500)</span
+								>
+							</label>
+							<label class="flex items-center space-x-3 cursor-pointer">
+								<input
+									type="checkbox"
+									[(ngModel)]="bookingData.services.culturalTour"
+									name="culturalTour"
+									class="w-5 h-5 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+								/>
+								<span class="font-serif text-gray-700"
+									>Cultural Tour Guide (+Nu. 2,000)</span
+								>
+							</label>
+							<label class="flex items-center space-x-3 cursor-pointer">
+								<input
+									type="checkbox"
+									[(ngModel)]="bookingData.services.fineDining"
+									name="fineDining"
+									class="w-5 h-5 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+								/>
+								<span class="font-serif text-gray-700"
+									>Fine Dining Experience (+Nu. 1,200)</span
+								>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Booking Summary -->
+				<div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+					<h3 class="font-serif text-2xl text-gray-800 mb-4">
+						Booking Summary
+					</h3>
+					<div class="space-y-3 font-serif">
+						<div class="flex justify-between items-center">
+							<span class="text-gray-700"
+								>Room Rate ({{ bookingData.nights }} nights):</span
+							>
+							<span class="text-gray-800 font-semibold"
+								>Nu. {{ getRoomTotal() }}</span
+							>
+						</div>
+						<div class="flex justify-between items-center">
+							<span class="text-gray-700">Additional Services:</span>
+							<span class="text-gray-800 font-semibold"
+								>Nu. {{ getServicesTotal() }}</span
+							>
+						</div>
+						<div class="flex justify-between items-center">
+							<span class="text-gray-700">Taxes & Fees:</span>
+							<span class="text-gray-800 font-semibold"
+								>Nu. {{ getTaxes() }}</span
+							>
+						</div>
+						<div class="border-t border-amber-300 pt-3">
+							<div class="flex justify-between items-center">
+								<span class="text-xl font-bold text-gray-800"
+									>Total Amount:</span
+								>
+								<span class="text-2xl font-bold text-amber-600"
+									>Nu. {{ getGrandTotal() }}</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Submit Buttons -->
+				<div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+					<button
+						type="button"
+						class="border border-gray-400 text-gray-600 hover:bg-gray-50 px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 rounded-lg"
+					>
+						Save as Draft
+					</button>
+					<button
+						type="submit"
+						(click)="submitBooking()"
+						class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 rounded-lg shadow-lg"
+					>
+						Complete Reservation
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

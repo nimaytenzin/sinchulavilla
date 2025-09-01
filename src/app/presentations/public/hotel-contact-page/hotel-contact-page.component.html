@@ -1,0 +1,471 @@
+<!-- Luxury Hotel Contact Page -->
+<div class="min-h-screen bg-stone-50">
+	<!-- Hero Section -->
+	<div
+		class="relative h-96 bg-cover bg-center bg-black"
+		style="
+			background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+				url('images/sinchula_012.jpg');
+		"
+	>
+		<div class="absolute inset-0 flex items-center justify-center">
+			<div class="text-center text-white px-6">
+				<div
+					class="text-amber-300 text-lg font-serif tracking-widest uppercase mb-2"
+				>
+					Get In Touch
+				</div>
+				<h1
+					class="font-serif text-4xl md:text-6xl font-normal tracking-wide drop-shadow-2xl mb-4"
+				>
+					Contact Us
+				</h1>
+				<div class="text-amber-200 text-xl font-serif tracking-wider">
+					We're Here to Help Plan Your Perfect Stay
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact Information Section -->
+	<section class="bg-white py-20 px-6">
+		<div class="max-w-6xl mx-auto">
+			<div class="text-center mb-16">
+				<div
+					class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+				>
+					Connect With Us
+				</div>
+				<h2
+					class="font-serif text-4xl md:text-6xl text-gray-800 mb-8 leading-tight"
+				>
+					How to Reach Sinchula Villa
+				</h2>
+				<div class="w-24 h-px bg-amber-600 mx-auto mb-8"></div>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-12 mb-16">
+				<!-- Phone Contact -->
+				<div
+					class="text-center bg-amber-50 p-8 rounded-lg border border-amber-200"
+				>
+					<div
+						class="w-16 h-16 bg-amber-600 rounded-full mx-auto mb-6 flex items-center justify-center"
+					>
+						<i class="pi pi-phone text-white text-2xl"></i>
+					</div>
+					<h3 class="font-serif text-2xl text-gray-800 mb-4">Call Us</h3>
+					<div class="space-y-2 font-serif text-gray-700">
+						<p class="text-lg">
+							<span class="text-gray-600">Reservations:</span><br />
+							<a
+								href="tel:+97598765432"
+								class="text-amber-600 hover:text-amber-700 font-semibold"
+							>
+								+975-98765432
+							</a>
+						</p>
+						<p class="text-lg">
+							<span class="text-gray-600">Front Desk:</span><br />
+							<a
+								href="tel:+97511223344"
+								class="text-amber-600 hover:text-amber-700 font-semibold"
+							>
+								+975-11223344
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- Email Contact -->
+				<div
+					class="text-center bg-amber-50 p-8 rounded-lg border border-amber-200"
+				>
+					<div
+						class="w-16 h-16 bg-amber-600 rounded-full mx-auto mb-6 flex items-center justify-center"
+					>
+						<i class="pi pi-envelope text-white text-2xl"></i>
+					</div>
+					<h3 class="font-serif text-2xl text-gray-800 mb-4">Email Us</h3>
+					<div class="space-y-2 font-serif text-gray-700">
+						<p class="text-lg">
+							<span class="text-gray-600">General Inquiries:</span><br />
+							<a
+								href="mailto:info@sinchulavilla.bt"
+								class="text-amber-600 hover:text-amber-700 font-semibold"
+							>
+								info&#64;sinchulavilla.bt
+							</a>
+						</p>
+						<p class="text-lg">
+							<span class="text-gray-600">Reservations:</span><br />
+							<a
+								href="mailto:booking@sinchulavilla.bt"
+								class="text-amber-600 hover:text-amber-700 font-semibold"
+							>
+								booking&#64;sinchulavilla.bt
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- Location -->
+				<div
+					class="text-center bg-amber-50 p-8 rounded-lg border border-amber-200"
+				>
+					<div
+						class="w-16 h-16 bg-amber-600 rounded-full mx-auto mb-6 flex items-center justify-center"
+					>
+						<i class="pi pi-map-marker text-white text-2xl"></i>
+					</div>
+					<h3 class="font-serif text-2xl text-gray-800 mb-4">Visit Us</h3>
+					<div class="font-serif text-gray-700">
+						<p class="text-lg leading-relaxed">
+							Samarlungkha, Geptey (Olathang)<br />
+							Paro, Bhutan<br />
+							<span class="text-amber-600 font-semibold"
+								>2km from Paro Town</span
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Form Section -->
+	<section class="bg-gradient-to-b from-stone-50 to-amber-50 py-20 px-6">
+		<div class="max-w-4xl mx-auto">
+			<div class="text-center mb-16">
+				<div
+					class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+				>
+					Send Us a Message
+				</div>
+				<h2
+					class="font-serif text-4xl md:text-5xl text-gray-800 mb-8 leading-tight"
+				>
+					Let's Plan Your Perfect Stay
+				</h2>
+				<div class="w-24 h-px bg-amber-600 mx-auto mb-8"></div>
+			</div>
+
+			<div class="bg-white shadow-2xl rounded-lg overflow-hidden">
+				<div
+					class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-8"
+				>
+					<h3 class="font-serif text-2xl mb-2">Contact Information</h3>
+					<p class="text-amber-100 font-serif">
+						We'd love to hear from you. Send us a message and we'll respond as
+						soon as possible.
+					</p>
+				</div>
+
+				<form class="p-8 space-y-6" (ngSubmit)="submitContactForm()">
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Your Name *</label
+							>
+							<input
+								type="text"
+								[(ngModel)]="contactForm.name"
+								name="name"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="Enter your full name"
+								required
+							/>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Email Address *</label
+							>
+							<input
+								type="email"
+								[(ngModel)]="contactForm.email"
+								name="email"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="your.email&#64;domain.com"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Phone Number</label
+							>
+							<input
+								type="tel"
+								[(ngModel)]="contactForm.phone"
+								name="phone"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+								placeholder="+975-12345678"
+							/>
+						</div>
+						<div>
+							<label class="block text-gray-700 font-serif text-lg mb-2"
+								>Inquiry Type</label
+							>
+							<select
+								[(ngModel)]="contactForm.inquiryType"
+								name="inquiryType"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+							>
+								<option value="">Select inquiry type</option>
+								<option value="reservation">Room Reservation</option>
+								<option value="events">Events & Celebrations</option>
+								<option value="dining">Dining Reservations</option>
+								<option value="spa">Spa & Wellness</option>
+								<option value="tours">Cultural Tours</option>
+								<option value="general">General Information</option>
+								<option value="feedback">Feedback & Reviews</option>
+							</select>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-gray-700 font-serif text-lg mb-2"
+							>Your Message *</label
+						>
+						<textarea
+							[(ngModel)]="contactForm.message"
+							name="message"
+							rows="6"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg font-serif focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200 resize-none"
+							placeholder="Please share your questions, special requests, or how we can help make your stay extraordinary..."
+							required
+						></textarea>
+					</div>
+
+					<div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+						<button
+							type="button"
+							class="border border-gray-400 text-gray-600 hover:bg-gray-50 px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 rounded-lg"
+						>
+							Clear Form
+						</button>
+						<button
+							type="submit"
+							class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 rounded-lg shadow-lg"
+						>
+							Send Message
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Location & Directions -->
+	<section class="bg-white py-20 px-6">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid md:grid-cols-2 gap-16 items-center">
+				<div>
+					<div
+						class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+					>
+						Getting Here
+					</div>
+					<h2
+						class="font-serif text-4xl md:text-5xl text-gray-800 mb-8 leading-tight"
+					>
+						Directions to Sinchula Villa
+					</h2>
+					<div class="w-16 h-px bg-amber-600 mb-8"></div>
+
+					<div
+						class="space-y-6 font-serif text-lg text-gray-700 leading-relaxed"
+					>
+						<div>
+							<h3 class="text-xl font-bold text-gray-800 mb-2">
+								From Paro Airport
+							</h3>
+							<p>
+								Our hotel is conveniently located just 15 minutes from Paro
+								International Airport. We offer complimentary airport transfer
+								service for all guests. Please inform us of your arrival details
+								when making your reservation.
+							</p>
+						</div>
+
+						<div>
+							<h3 class="text-xl font-bold text-gray-800 mb-2">
+								From Paro Town
+							</h3>
+							<p>
+								Take the main road towards Thimphu for 2km, then turn right at
+								the Sinchula Villa signboard. Follow the pine-lined road for
+								500m to reach our entrance.
+							</p>
+						</div>
+
+						<div>
+							<h3 class="text-xl font-bold text-gray-800 mb-2">
+								Nearby Landmarks
+							</h3>
+							<ul class="list-disc list-inside space-y-1">
+								<li>Paro Dzong (Fortress) - 2km</li>
+								<li>National Museum - 2.5km</li>
+								<li>Tiger's Nest Monastery - 8km</li>
+								<li>Weekend Market - 2km</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="relative">
+					<img
+						src="images/sinchula_003.jpg"
+						alt="Villa Location"
+						class="w-full h-96 object-cover shadow-2xl rounded-lg"
+					/>
+					<div
+						class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-600/10 border border-amber-600 rounded-lg"
+					></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Operating Hours & Additional Info -->
+	<section class="bg-gradient-to-b from-amber-50 to-stone-50 py-20 px-6">
+		<div class="max-w-4xl mx-auto">
+			<div class="text-center mb-16">
+				<div
+					class="text-amber-600 font-serif text-lg tracking-widest uppercase mb-4"
+				>
+					Important Information
+				</div>
+				<h2
+					class="font-serif text-4xl md:text-5xl text-gray-800 mb-8 leading-tight"
+				>
+					Hours & Services
+				</h2>
+				<div class="w-24 h-px bg-amber-600 mx-auto"></div>
+			</div>
+
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Operating Hours -->
+				<div class="bg-white p-8 rounded-lg shadow-lg">
+					<h3 class="font-serif text-2xl text-gray-800 mb-6 text-center">
+						Operating Hours
+					</h3>
+					<div class="space-y-4 font-serif text-gray-700">
+						<div
+							class="flex justify-between items-center border-b border-gray-200 pb-2"
+						>
+							<span>Front Desk</span>
+							<span class="text-amber-600 font-semibold">24/7</span>
+						</div>
+						<div
+							class="flex justify-between items-center border-b border-gray-200 pb-2"
+						>
+							<span>Restaurant</span>
+							<span class="text-amber-600 font-semibold"
+								>6:00 AM - 10:00 PM</span
+							>
+						</div>
+						<div
+							class="flex justify-between items-center border-b border-gray-200 pb-2"
+						>
+							<span>Spa & Wellness</span>
+							<span class="text-amber-600 font-semibold"
+								>8:00 AM - 8:00 PM</span
+							>
+						</div>
+						<div
+							class="flex justify-between items-center border-b border-gray-200 pb-2"
+						>
+							<span>Concierge</span>
+							<span class="text-amber-600 font-semibold"
+								>7:00 AM - 10:00 PM</span
+							>
+						</div>
+						<div class="flex justify-between items-center">
+							<span>Room Service</span>
+							<span class="text-amber-600 font-semibold">24/7</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Services -->
+				<div class="bg-white p-8 rounded-lg shadow-lg">
+					<h3 class="font-serif text-2xl text-gray-800 mb-6 text-center">
+						Available Services
+					</h3>
+					<div class="space-y-3 font-serif text-gray-700">
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Airport Transfer Service</span>
+						</div>
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Cultural Tour Arrangements</span>
+						</div>
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Restaurant Reservations</span>
+						</div>
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Spa Appointments</span>
+						</div>
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Event Planning</span>
+						</div>
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Laundry & Dry Cleaning</span>
+						</div>
+						<div class="flex items-center gap-3">
+							<span class="text-amber-600"
+								><i class="pi pi-check-circle"></i
+							></span>
+							<span>Currency Exchange</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="bg-gradient-to-r from-amber-600 to-amber-700 py-16 px-6">
+		<div class="max-w-4xl mx-auto text-center text-white">
+			<h2 class="font-serif text-3xl md:text-4xl mb-6 leading-tight">
+				Ready to Experience Sinchula Villa?
+			</h2>
+			<p class="font-serif text-xl mb-8 leading-relaxed">
+				Contact us today to begin planning your unforgettable stay in the heart
+				of Bhutan.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<button
+					class="bg-white text-amber-700 hover:bg-amber-50 px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 rounded-lg"
+				>
+					Make a Reservation
+				</button>
+				<button
+					class="border border-white text-white hover:bg-white hover:text-amber-700 px-8 py-3 font-serif text-lg tracking-wide transition-all duration-300 rounded-lg"
+				>
+					Call Now
+				</button>
+			</div>
+		</div>
+	</section>
+</div>

@@ -33,4 +33,17 @@ export class NavbarComponent {
 	closeSidebar() {
 		this.sidebarOpen = false;
 	}
+
+	goToBooking() {
+		console.log('GOTING TO BOOKING');
+		this.router.navigate(['book']);
+	}
+
+	goToAbout() {
+		this.router.navigate(['about']);
+	}
+
+	goToContact() {
+		this.router.navigate(['contact']);
+	}
 }
