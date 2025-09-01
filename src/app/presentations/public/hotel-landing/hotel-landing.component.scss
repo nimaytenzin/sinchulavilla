@@ -47,10 +47,8 @@
 .events,
 .testimonials {
     padding: 2rem;
-    max-width: 900px;
+    max-width: 80vw;
     margin: 2rem auto;
-    background: #f9f9f9;
-    border-radius: 8px;
 }
 .room-list {
     display: flex;
@@ -91,4 +89,24 @@
 }
 .footer-content p {
     margin: 0.5rem 0;
+}
+
+/* 70vh Auto-Scrolling Image Slider Styles */
+.slider-container {
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.slider-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slider-image-wrapper img {
+    z-index: 10;
+}
+.slider-image-wrapper img.active {
+    z-index: 20;
 }
