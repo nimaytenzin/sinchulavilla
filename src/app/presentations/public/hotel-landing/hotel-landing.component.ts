@@ -12,10 +12,8 @@ export class HotelLandingComponent {
 	sliderImages = [
 		'images/sinchula_001.jpg',
 		'images/sinchula_002.jpg',
-		'images/sinchula_003.jpg',
-		'images/sinchula_004.jpg',
-		'images/sinchula_005.jpg',
-		'	images/sinchula_006.jpg',
+		'images/sinchula_016.jpg',
+		'images/sinchula_034.jpg',
 	];
 	currentSlide = 0;
 
